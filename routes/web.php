@@ -22,3 +22,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('info', 'ApiController@getInfo');
+Route::get('ticker/all', 'ApiController@getAllTicker');
+Route::get('ticker/{pair?}', 'ApiController@getTicker');
+Route::get('webhook', 'ApiController@webhook');
